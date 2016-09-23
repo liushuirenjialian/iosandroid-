@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=yes">
+    <title>探墓风云手游下载</title>
+    <meta name="author" content="yng">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/download.css">
+<script> var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "//hm.baidu.com/hm.js?af8a808af5503558b1a773b82ebf018e"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })(); </script>
+</head>
+<body>
+    <!-- 微信ios 微博 ios -->
+    <div id="weixinMsg" class="weixin">
+    </div>
+    <!-- 微信安卓 微博 安卓 -->
+    <div id="weixinMsg2" class="weixin">
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!--<script type="text/javascript"  src="js/jweixin-1.0.0.js"></script>-->
+    <!--<script type="text/javascript" src="js/app.js"></script>-->
+    <!--<script type="text/javascript" src="js/sha1.js"></script>-->
+    <script type="text/javascript">
+    // 微博微信都自动弹出层
+    //如果匹配苹果系统就拉载到苹果链接
+    // 否则 android链接
+    $(function() {
+        var useragent = window.navigator.userAgent.toLowerCase();
+            var d = document;
+            var oShadow = d.getElementById('shadow');
+            var scrollHeight = d.documentElement.scrollHeight || d.body.scrollHeight;
+            $('#shadow,#weixinMsg .close').click(function() {
+                oShadow.style.display = 'none';
+                $("#weixinMsg,#weixinMsg2").hide();
+
+            });
+            // ios
+           if((useragent.match(/(iPhone|iPod|ios|iOS|iPad)/i))){
+
+            if (useragent.match(/weibo/i) == 'weibo') {
+                // oShadow.style.display = 'block';
+                // oShadow.style.height = scrollHeight + 'px';
+               d.getElementById("weixinMsg").style.display = 'block';
+            }
+
+            if (useragent.match(/MicroMessenger/i) == 'micromessenger') {
+                // oShadow.style.display = 'block';
+                // oShadow.style.height = scrollHeight + 'px';
+                d.getElementById("weixinMsg").style.display = 'block';
+            }
+           }
+           // android
+           else{
+        
+            if (useragent.match(/weibo/i) == 'weibo') {
+
+               d.getElementById("weixinMsg2").style.display = 'block';
+
+            }
+            
+            if (useragent.match(/MicroMessenger/i) == 'micromessenger') {
+                // oShadow.style.display = 'block';
+                // oShadow.style.height = scrollHeight + 'px';
+                d.getElementById("weixinMsg2").style.display = 'block';
+            }          
+         }
+            if((useragent.match(/(iPhone|iPod|ios|iOS|iPad)/i))){
+                location.replace("http://tracking.hoolai.com/tracking/814/");
+            }
+            else{
+                location.replace("http://cdn.tmfy.hulai.com/tmfywxfx.apk");
+            }
+    });
+    </script>
+</body>
+
+</html>
